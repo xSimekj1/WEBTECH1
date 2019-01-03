@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="style.css">
-  
-  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <title>Tím 43</title>
 </head>
@@ -30,8 +30,32 @@
       </ul>
     </nav>
   </div>
-
-
+  <div class="dayInfo-container">
+    <div id="calendar-container">
+      <div id="calendar-header">
+        <div id="prev-month" onclick="prevMonth()"><</div>
+        <span id="calendar-month-year"></span>
+        <div id="next-month" onclick="nextMonth()">></div>
+      </div>
+      <div id="calendar-dates">
+      </div>
+    </div>
+    <div id="result-panel">
+      <p id="date"></p>
+      <div id="namesday"></div>
+      <p id="sk"></p>
+      <p id="cz"></p>
+      <p id="pl"></p>
+      <p id="hu"></p>
+      <p id="at"></p>
+      <div id="findNamesDay">
+        <label for="FirstName">Hľadané Meno:</label>
+        <input type="text" id="hladaneMeno" name="FirstName"><br><br>
+        <button type="button" class="button" onclick="FindNameInCalendar()">Nájdi meno v kalendáry</button>
+      </div>
+    </div>
+  </div>
+<div id="xmlData"></div>
 <div class="footer">
   <p>© 2018 Copyright: Šimi</p>
 </div>

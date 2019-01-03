@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="simi.css">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-
-<title>Tím 43 - Šimiho Hra</title>
+  <title>Tím 43 - Šimiho Hra</title>
 </head>
 <body>
   <div class="row">
@@ -31,12 +31,46 @@
       </ul>
     </nav>
   </div>
+  <div class="row">
+    <div id="gameZone">
 
-<div class="footer">
-  <p>© 2018 Copyright: Šimi</p>
-</div>
+      <object type="image/svg+xml" data="img/slovakia.svg" id="countries"></object>
+      <svg
+      id="gameMap"
+      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      width="612.6908"
+      height="400"
+      fill="#ececec"
+      stroke="black"
+      stroke-width="0.5"
+      onload="makeDraggable(evt)"
+      />
+      <p id="game-hint"></p>
+    </div>
+    <div class="splitline"></div>
+    <div class="menu">
+      <p id="score"></p>
+      <p id="timer"></p>
+      <label class="custom-checkbox-container" onchange="getHint()">Toggle Hint
+        <input type="checkbox" id="hint-checkbox">
+        <span class="custom-checkbox-checkmark"></span>
+      </label>
+      <label class="custom-checkbox-container" onchange="switchBorders()">Turn Borders On/Off
+        <input type="checkbox" id="borders-checkbox" checked>
+        <span class="custom-checkbox-checkmark"></span>
+      </label>
+      <div class="button-panel col-12">
+        <button type="button" class="button" onclick="reset()">Restart</button>
+      </div>
 
-<script src="myScript.js"></script>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2018 Copyright: Šimi</p>
+  </div>
+
+  <script src="simi.js"></script>
 
 </body>
 </html>

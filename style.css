@@ -148,25 +148,6 @@ nav ul li:hover ul li {
   background-color: #111;
 }
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-  border: 1px solid black;
-}
-
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-  background-color: #f26222;
-  color: white;
-}
-/*Zadanie 6*/
-
 abbr{
   text-decoration: none;
 }
@@ -253,4 +234,54 @@ abbr{
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+.button-panel{
+  padding: 0;
+}
+
+#calendar-container{
+    padding: 10px;
+    width: 210px;
+    height: 240px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: Arial;
+    background-image: linear-gradient(#fff, #d3d3d3);
+    display: table;
+}
+
+#calendar-container>div{
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+#calendar-month-year{
+    margin: 5px;
+    width: 180px;
+}
+
+#calendar-dates>table>tr>td{
+    padding: 5px;
+}
+#active{
+  background-color: #f26222;
+}
+#calendar-dates>table>tr>td:hover{
+    background-color: #777;
+    cursor: pointer;
+}
+#prev-month, #next-month, #calendar-month-year{
+  float: left;
+  cursor: pointer;
+}
+#result-panel{
+  border-radius: 10px;
+  background-color: #d6e1146e;
+  width: 230px;
+  padding: 15px;
+}
+.dayInfo-container{
+  float: right;
 }
